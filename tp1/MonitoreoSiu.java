@@ -19,6 +19,7 @@ public class MonitoreoSiu {
                 }
             }
         };
+        //comentario random
         
         ScheduledFuture<?> futuro = scheduler.scheduleWithFixedDelay(tareaVerificacion, 0, 5, TimeUnit.SECONDS);
         
