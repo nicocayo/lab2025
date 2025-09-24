@@ -1,32 +1,91 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   background-image: url('assets/principal\ 2.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+ }
+
+ .attic-container::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 300%;
+   height:400%;
+   background:
+     radial-gradient(ellipse at center, transparent, #090909);
+   pointer-events: none;
+ }
 
 
-body {
-  background-image: url('assets/principal\ 2.png'); 
-  background-size: cover;
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  background-position: center center;
-}
+ /* Vista cuadriculada buttons */
+ .vista-button {
+   position: absolute;
+   right: 12%;
+   background: radial-gradient(ellipse at center, rgba(200, 200, 200, 0.25), rgba(218, 165, 32, 0.274));
+   color: white;
+   padding: 20px 30px;
+   border: none;
+   border-radius: 25px;
+   font-size: 22px;
+   font-weight: 500;
+   cursor: pointer;
+   backdrop-filter: blur(100px);
+   box-shadow:
+     0 4px 15px rgba(0, 0, 0, 0.2),
+     inset 0 1px 3px rgba(255, 255, 255, 0.3);
+   transition: all 0.3s ease;
+ }
 
-/*botones*/
-.button {
-  border: none;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: blue;
-  border-radius: 15%;
-}
+ .vista-button:hover {
+   transform: scale(1.6, 1.6);
+   box-shadow:
+     0 6px 20px rgba(0, 0, 0, 3.0),
+     inset 0 1px 3px rgba(255, 255, 255, 0.3);
+ }
 
-.button1 {
-  color: black;
-  border: 2px solid #04AA6D;
-}
+ .vista-button.top {
+   top: 25%;
+ }
 
-.button1:hover {
-  background-color: #04AA6D;
-  color: white;
-}
+ .vista-button.bottom {
+   top: 45%;
+ }
+
+ /* vilma banner */
+ .vilma-banner {
+   position: absolute;
+   bottom: 20%;
+   left: 50%;
+   width: 100%;
+   display: inline-block;
+   transform: translateX(-50%);
+   background: linear-gradient(145deg, rgba(200, 200, 200, 0.95), rgba(220, 220, 220, 0.95), );
+   color: #ffffff;
+   padding: 20px 60px;
+   font-size: 24px;
+   font-weight: 600;
+   text-align: center;
+   border-radius: 8px;
+   box-shadow:
+     0 8px 32px rgba(0, 0, 0, 0.3),
+     inset 0 1px 3px rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ #mensaje-bienvenida:hover {
+   transform: scale(1.07, 1.07);
+ }
+
+.mea-culpa{
+   font-family: "Mea Culpa", cursive;  
+   font-style: normal;
+ }
