@@ -9,13 +9,13 @@
   }
 
  body {
-   background-image: url('assets/principal\ 2.png');
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center center;
-   overflow: hidden; 
- }
+            background-image: url('assets/principal\ 2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            overflow: hidden; 
+        }
 
  .attic-container::before{
    content: '';
@@ -47,7 +47,7 @@
      0 4px 15px rgba(0, 0, 0, 0.2),
      inset 0 1px 3px rgba(255, 255, 255, 0.3);
    transition: all 0.3s ease;
-   min-width: 150px;
+   min-width: 10%;
  }
 
  .vista-button:hover {

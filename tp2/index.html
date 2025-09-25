@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ático de Vilma</title>
-      <link  rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+    <link  rel="stylesheet" href="styles.css"/>
     <style>
+        body {
+            background-image: url('assets/principal\ 2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            overflow: hidden; 
+        }
     </style>
 </head>
 
 <body>
     <div class="attic-container">
             <!-- Vista cuadriculada buttons -->
-            <button class="vista-button top mea-culpa" ><a href="./cuadriculada.html" class="mea-culpa" >Vista<br>cuadriculada</a></button>
+            <button class="vista-button top mea-culpa" id="botonCuadriculada">Vista<br>cuadriculada</a></button>
             
-            <button class="vista-button bottom mea-culpa">Vista<br>Aumentada</button>
+            <button class="vista-button bottom mea-culpa" id="botonAumentada">Vista<br>Aumentada</button>
 
         <!-- vilmaßbanner -->
         <div class="vilma-banner">
