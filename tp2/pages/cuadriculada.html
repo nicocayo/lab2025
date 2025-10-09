@@ -1,78 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet" href="../css/cuadriculada.css">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Cuadriculada</title>
-    <style>
-        body {
-            background-image: url('./assets/Principal.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center center;
-            overflow: hidden; 
-        }
-
-    .cuadricula {
-    display: grid;
-    grid-template-columns: repeat(4, 120px);
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
- 
-  
-  figure {
-    margin: 0;
-    text-align: center;
-  }
-  img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-  }
-
-  img:hover {
-   transform: scale(1.6, 1.6);
-   box-shadow:
-     0 6px 20px rgba(0, 0, 0, 3.0),
-     inset 0 1px 3px rgba(255, 255, 255, 0.3);
- }
-
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista Cuadriculada</title>
 </head>
+
 <body>
-    <div class="attic-container">
-        
-            <button class="vista-button top mea-culpa" ><a class="mea-culpa" href="./index.html">Vista<br>Index</a></button>
-            <button class="vista-button bottom mea-culpa" >Vista<br>Aumentada</button>   
-    </div>
+  <div class="attic-container">
 
-    <section aria-label="Instrumentos">
-  <ul class="cuadricula">
-    <li>
-      <figure>
-        <img src="./assets/piano.png" alt="Piano">
-        <figcaption>Piano</figcaption>
-      </figure>
-    </li>
-    <li><figure><figcaption>Guitarra</figcaption></figure></li>
-    <li>
-        <figure>
-            <img src=" ./assets/bateria.png" alt="Piano">
+    <button class="vista-button top mea-culpa"><a class="mea-culpa" href="../index.html">Vista<br>Index</a></button>
+    <button class="vista-button bottom mea-culpa">Vista<br>Aumentada</button>
+  </div>
+
+  <section aria-label="Instrumentos">
+    <div style="border: 2px solid black">
+      <ul class="cuadricula">
+        <li>
+          <figure>
+            <img src="../assets/piano.png" alt="Piano">
+            <figcaption>Piano</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src=" ../assets/bateria.png" alt="Piano">
+            <figcaption>Guitarra</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src=" ../assets/bateria.png" alt="Piano">
             <figcaption>Bateria</figcaption>
-        </figure>
-    </li>
-  </ul>
-
-</section>
-
-
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../assets/piano.png" alt="Piano">
+            <figcaption>Piano</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src=" ../assets/bateria.png" alt="Piano">
+            <figcaption>Guitarra</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src=" ../assets/bateria.png" alt="Piano">
+            <figcaption>Bateria</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </section>
 </body>
 
-</html> 
+</html>
