@@ -8,8 +8,8 @@
   text-decoration: none;
   }
 
- body {
-            background-image: url('assets/principal\ 2.png');
+      body {
+            background-image: url('./assets/21.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
