@@ -16,7 +16,7 @@ body {
     padding: 0;
 }
 
-#tabla-instrumentos {
+#tablaInstrumentos {
     margin: 0 auto;
     color: #fd8b00;
     border-spacing: 50px;
@@ -45,3 +45,11 @@ img:hover {
         0 6px 20px rgba(0, 0, 0, 3.0),
         inset 0 1px 3px rgba(255, 255, 255, 0.3);
 }
+
+.cuadroInstrumentos {
+    margin-top: 5%;
+border: 2px solid black;
+text-align: center
+}
+
+
