@@ -16,7 +16,10 @@ body {
     padding: 0;
 }
 
-
+#tabla-instrumentos {
+    margin: 0 auto;
+    color: #fd8b00
+}
 
 figure {
     margin: 0;
