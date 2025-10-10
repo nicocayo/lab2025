@@ -18,7 +18,14 @@ body {
 
 #tabla-instrumentos {
     margin: 0 auto;
-    color: #fd8b00
+    color: #fd8b00;
+    border-spacing: 50px;
+}
+
+.link-instrumento {
+   font-family: "Mea Culpa", cursive;
+   font-style: normal;
+   color: rgb(196, 84, 15);
 }
 
 figure {
