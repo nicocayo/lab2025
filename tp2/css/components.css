@@ -33,7 +33,7 @@
    transform: scale(1.6, 1.6);
    box-shadow:
      0 6px 20px rgba(0, 0, 0, 3.0),
-     inset 0 1px 3px rgba(255, 255, 255, 0.3);
+     inset 0 1px 3px rgb(255, 255, 255);
  }
 
  .hover{
@@ -56,3 +56,9 @@
    font-style: normal;
    color:rgb(114, 114, 114);
  }
+
+ img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}

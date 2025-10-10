@@ -46,7 +46,7 @@ img:hover {
         inset 0 1px 3px rgba(255, 255, 255, 0.3);
 }
 
-.cuadroInstrumentos {
+.contenedor-instrumentos {
     margin-top: 5%;
 border: 2px solid black;
 text-align: center
