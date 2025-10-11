@@ -1,6 +1,6 @@
 //Funciones del piano 
 const pianoKeys = document.querySelectorAll('.key');
-let audio = new Audio('../tunes/a.wav');
+let audio = new Audio('../sonidos/a.wav');
 
 pianoKeys.forEach((key) => {
     key.addEventListener('click', () => 
@@ -8,7 +8,7 @@ pianoKeys.forEach((key) => {
 })
 
 const playKey = (key) => {
-    audio.src = `../tunes/${key}.wav`;
+    audio.src = `../sonidos/${key}.wav`;
     audio.play();
 }
 
