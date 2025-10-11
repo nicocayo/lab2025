@@ -1,0 +1,68 @@
+body{
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+  height: 100vh;
+  margin: 0;
+
+  .piano{
+    border-radius: 10px;
+    height: 380px;
+    width: 500px;
+    background-color: #686868;
+    .piano-header{
+      width: 100%;
+      height: 100px;
+      background-color: black;
+      border-radius: 10px 10px 0 0;
+
+      div{
+        position: relative;
+        top: 50%;
+        left: 40px;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-color: #ba0000;
+        border-radius: 50%;
+      }
+    }
+
+    .keys{
+      display: flex;
+      cursor: pointer;
+      gap: 4px;
+      justify-content: center;
+
+      .white{
+        background: linear-gradient(rgb(255,255,255) 97%, 
+        rgb(228,228,228) 3%);
+        width: 50px;
+        height: 270px;
+        margin: 0 -2px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+
+        &:active{
+          background: linear-gradient(rgb(239, 239, 239) 97%,
+          rgb(192,192,192) 3%);
+        }
+      }
+
+      .black{
+        position: relative;
+        z-index: 2;
+        margin: 0 -18px 0 -22px;
+        background: linear-gradient(rgb(30,30,30) 35%, rgb(0,0,0));
+        width: 30px;
+        height: 180px;
+
+        &:active{
+          background: black;
+       }
+      }
+    }
+  } 
+} 
