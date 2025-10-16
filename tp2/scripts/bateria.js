@@ -1,5 +1,6 @@
 
 
+
 //Funciones de grabacion y reproduccion
 
 const recordButton = document.getElementById('recordButton');
@@ -17,7 +18,6 @@ const bpmInput = document.getElementById('bpmInput');
 //  Configuración del Tiempo
 Tone.Transport.bpm.value = currentBPM;
 
-
 const drumSounds = {
     'w': new Tone.Player("../sonidos/drumkit/w.wav").toDestination(),
     'a': new Tone.Player("../sonidos/drumkit/a.wav").toDestination(),
@@ -27,6 +27,7 @@ const drumSounds = {
     'j': new Tone.Player("../sonidos/drumkit/j.wav").toDestination(),
     'k': new Tone.Player("../sonidos/drumkit/k.wav").toDestination(),
 };
+
 
 statusText.textContent = "Cargando sonidos...";
 Tone.loaded().then(() => {
@@ -42,7 +43,7 @@ document.addEventListener('keydown', (event) => {
     const sound = drumSounds[key]; 
     
     if (sound && sound.loaded) { 
-        sound.start(); 
+        sound.start();
         if (isRecording) { 
             const eventTime = Tone.Transport.now() - recordingStartTime;
             recordedEvents.push({
