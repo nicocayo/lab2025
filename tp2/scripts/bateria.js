@@ -11,10 +11,11 @@ let isRecording = false;
 let recordedEvents = [];       
 let recordingStartTime = 0;    
 let loopId = null;             
-const BPM = 120;               
+let currentBPM = 120;
+const bpmInput = document.getElementById('bpmInput');
 
 //  Configuración del Tiempo
-Tone.Transport.bpm.value = BPM;
+Tone.Transport.bpm.value = currentBPM;
 
 
 const drumSounds = {
@@ -108,7 +109,7 @@ playButton.addEventListener('click', () => {
 
 
     Tone.Transport.start();
-    statusText.textContent = `▶️ Reproduciendo loop a ${BPM} BPM...`;
+    statusText.textContent = `▶️ Reproduciendo loop a ${currentBPM} BPM...`;
     playButton.disabled = true;
     stopButton.disabled = false;
 });
@@ -124,4 +125,31 @@ stopButton.addEventListener('click', () => {
     statusText.textContent = 'Loop detenido. Presiona PLAY para reanudar.';
     playButton.disabled = false;
     stopButton.disabled = true;
+});
+
+
+
+
+//configuracion bpm
+
+function setBPM() {
+    const newBPM = parseInt(bpmInput.value); 
+    if (isNaN(newBPM) || newBPM < 40 || newBPM > 300) {
+        statusText.textContent = `⚠️ BPM inválido. Rango: 40-300.`;
+        bpmInput.value = currentBPM; 
+        return;
+    }
+
+    Tone.Transport.bpm.value = newBPM;
+    
+    currentBPM = newBPM;
+    
+    statusText.textContent = `Tempo actualizado a ${currentBPM} BPM.`;
+}
+bpmInput.addEventListener('change', setBPM);
+bpmInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        setBPM();
+        event.target.blur(); 
+    }
 });
