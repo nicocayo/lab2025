@@ -16,20 +16,25 @@
     <button class="vista-button top mea-culpa"><a class="mea-culpa" href="./cuadriculada.html">Vista<br>Cuadriculada</a></button>
     <button class="vista-button bottom mea-culpa"><a class="mea-culpa" href="./aumentada.html">Vista<br>Aumentada</a></button>
   </div>
-  <div class="drumkit">
-    <div class="center"data-key="w">W</div>
-    <div class="pad a" data-key="a">A</div>
-    <div class="pad s" data-key="s">S</div>
-    <div class="pad d" data-key="d">D</div>
-    <div class="pad h" data-key="h">H</div>
-    <div class="pad j" data-key="j">J</div>
-    <div class="pad k" data-key="k">K</div>
+    <div class="drumkit">
+      <div class="center"data-key="w">W</div>
+      <div class="pad a" data-key="a">A</div>
+      <div class="pad s" data-key="s">S</div>
+      <div class="pad d" data-key="d">D</div>
+      <div class="pad h" data-key="h">H</div>
+      <div class="pad j" data-key="j">J</div>
+      <div class="pad k" data-key="k">K</div>
 
-    <div class="menu">
+<div class="menu">
+    <button id="recordButton" class="control-button record-stop" disabled>🔴 GRABAR</button>
+    <button id="playButton" class="control-button play-stop" disabled>▶️ PLAY LOOP</button>
+    <button id="stopButton" class="control-button play-stop" disabled>⏹️ DETENER</button>
+    
+    <p id="status" class="status-message">Cargando sonidos...</p>
+</div>
     </div>
   </div>
-  </div>
-    
+    <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
     <script src="../scripts/bateria.js"></script>
 </body>
 </html>
