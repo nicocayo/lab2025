@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Funciones del piano 
 const pianoKeys = document.querySelectorAll('.key');
-let audio = new Audio('../tunes/a.wav');
+let audio = new Audio('../sonidos/piano/a.wav');
 
 pianoKeys.forEach((key) => {
     key.addEventListener('click', () => 
@@ -26,10 +26,13 @@ pianoKeys.forEach((key) => {
 })
 
 const playKey = (key) => {
-    audio.src = `../tunes/${key}.wav`;
+    audio.src = `../sonidos/piano/${key}.wav`;
     audio.play();
 }
 
 document.addEventListener('keydown', (event) => {
     playKey(event.key);
 })
+
+
+
