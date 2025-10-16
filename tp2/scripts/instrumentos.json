@@ -1,0 +1,19 @@
+{
+  "instrumentos": [
+    {
+      "nombre": "Piano",
+      "imagen": "../assets/piano.png",
+      "link": "./individualPiano.html"
+    },
+    {
+      "nombre": "Batería",
+      "imagen": "../assets/bateria.png",
+      "link": "./individualBateria.html"
+    },
+    {
+      "nombre": "Piano Psicodélico",
+      "imagen": "../assets/pianoPsicodelico.png",
+      "link": "./individualPianoSonidos.html"
+    }
+  ]
+}

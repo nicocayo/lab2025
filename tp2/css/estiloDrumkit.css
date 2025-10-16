@@ -1,5 +1,4 @@
 body {
-  background-color: #1e1e1e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +11,8 @@ body {
   position: relative;
   width: 650px;
   height: 400px;
-  background: linear-gradient(135deg, #252525 60%, #9bac05 60%);
-  border-radius: 20px;w
+  background: linear-gradient(135deg, #4e301f 60%, #576a73 60%);
+  border-radius: 20px;
   overflow: hidden;
 }
 
