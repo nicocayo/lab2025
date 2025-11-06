@@ -1,6 +1,3 @@
-
-
-
 //Funciones de grabacion y reproduccion
 
 const recordButton = document.getElementById('recordButton');
@@ -127,9 +124,6 @@ stopButton.addEventListener('click', () => {
     playButton.disabled = false;
     stopButton.disabled = true;
 });
-
-
-
 
 //configuracion bpm
 
