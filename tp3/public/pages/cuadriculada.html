@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista Cuadriculada</title>
+  <link rel="stylesheet" href="../css/cuadriculada.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    /* dondo */
+    .contenedor-instrumentos {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .titulo-seccion {
+      color: white;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    #tabla-instrumentos {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 15px;
+    }
+
+    #tabla-instrumentos td {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #tabla-instrumentos td:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    #tabla-instrumentos img {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    #tabla-instrumentos p {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+      margin: 10px 0 5px 0;
+    }
+
+    #tabla-instrumentos small {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .controles-paginacion {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .controles-paginacion button {
+      background-color: #4ecdc4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .controles-paginacion button:hover:not(:disabled) {
+      background-color: #44a5a0;
+    }
+
+    .controles-paginacion button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .info-paginacion {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .selector-cantidad {
+      margin: 10px 0;
+    }
+
+    .selector-cantidad select {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1em;
+    }
+
+    .mensaje-carga {
+      text-align: center;
+      color: white;
+      font-size: 1.5em;
+      padding: 50px;
+    }
+
+    .en-desarrollo {
+      background-color: #ffc107;
+      color: #333;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.8em;
+      margin-left: 5px;
+    }
+
+    .boton-crear-instrumento {
+      background: linear-gradient(145deg, #51cf66, #37b24d);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(81, 207, 102, 0.4);
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .boton-crear-instrumento:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(81, 207, 102, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="attic-container">
+    <button class="vista-button top mea-culpa">
+      <a class="mea-culpa" href="../index.html">Vista<br>Index</a>
+    </button>
+    <button class="vista-button bottom mea-culpa">
+      <a class="mea-culpa" href="./aumentada.html">Vista<br>Aumentada</a>
+    </button>
+  </div>
+
+  <section class="contenedor-instrumentos">
+    <h1 class="titulo-seccion">Instrumentos Disponibles</h1>
+    <button class="boton-crear-instrumento" onclick="location.href='./crearInstrumento.html'">
+      Crear Nuevo Instrumento
+    </button>
+    <table id="tabla-instrumentos">
+      <tbody id="cuerpo-tabla"></tbody>
+    </table>
+
+    <div class="controles-paginacion">
+      <div class="selector-cantidad">
+        <label for="select-cantidad">Instrumentos por página: </label>
+        <select id="select-cantidad">
+          <option value="4">4</option>
+          <option value="6" selected>6</option>
+          <option value="8">8</option>
+          <option value="12">12</option>
+          <option value="24">Todos</option>
+        </select>
+      </div>
+
+      <div class="info-paginacion" id="info-paginacion">
+        Cargando...
+      </div>
+
+      <div>
+        <button id="btn-primera" onclick="irAPagina(0)">« Primera</button>
+        <button id="btn-anterior" onclick="cambiarPagina(-1)">‹ Anterior</button>
+        <button id="btn-siguiente" onclick="cambiarPagina(1)">Siguiente ›</button>
+        <button id="btn-ultima" onclick="irAUltimaPagina()">Última »</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="../scripts/cargarInstrumentos.js"></script>
+</body>
+</html>

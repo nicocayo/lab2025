@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ático de Vilma</title>
+    <script src="script.js" defer></script>
+    <link  rel="stylesheet" href="./css/styles.css"/>
+
+    <link  rel="stylesheet" href="./css/components.css"/>
+    <style>
+         body {
+            overflow: hidden; /* bloquea scroll */
+        }
+
+        .attic-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .attic-container::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent, #090909);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .vista-button {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .vista-button.top {
+            top: 20px;
+            right: 20px;
+        }
+
+        .vista-button.bottom {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Banner en el centro */
+        .vilma-banner {
+            position: relative; /* Cambiado de absolute con ocmponents*/
+            z-index: 2;
+            background: linear-gradient(145deg, rgba(200, 200, 200, 0.95), rgba(220, 220, 220, 0.95));
+            color: #ffffff;
+            padding: 20px 60px;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 3px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        #mensaje-bienvenida {
+            margin: 0;
+        }
+
+        #mensaje-bienvenida:hover {
+            transform: scale(1.07);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="attic-container">
+        <a href="./pages/cuadriculada.html">
+            <button class="vista-button top mea-culpa">Vista<br>cuadriculada</button>
+        </a>
+
+        <a href="./pages/aumentada.html">
+            <button class="vista-button bottom mea-culpa">Vista<br>Aumentada</button>
+        </a>
+
+        <div class="vilma-banner">
+            <h1 class="mea-culpa" id="mensaje-bienvenida">Bienvenidos Al Ático de Vilma</h1>
+        </div>
+    </div>
+</body>
+
+</html>

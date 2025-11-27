@@ -1,0 +1,54 @@
+body {
+    background-image: url('../assets/img/fondoBienvenida.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#tablaInstrumentos {
+    margin: 0 auto;
+    color: #fd8b00;
+    border-spacing: 50px;
+}
+
+.link-instrumento {
+   font-family: "Mea Culpa", cursive;
+   font-style: normal;
+   color: rgb(196, 84, 15);
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.6, 1.6);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 3.0),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.contenedor-instrumentos {
+    margin-top: 5%;
+border: 2px solid black;
+text-align: center
+}
+
+

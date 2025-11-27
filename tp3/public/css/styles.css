@@ -1,0 +1,54 @@
+
+
+
+ body {
+   background-image: url('../assets/img/fondoBienvenida.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+ }
+
+ .attic-container {
+  position: relative;
+ }
+
+ .attic-container::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background:
+     radial-gradient(ellipse at center, transparent, #090909);
+   pointer-events: none;
+   z-index: -1;
+ }
+
+ /* vilma banner */
+ .vilma-banner {
+   position: absolute;
+   bottom: 20%;
+   left: 50%;
+   width: 100%;
+   display: inline-block;
+   transform: translateX(-50%);
+   background: linear-gradient(145deg, rgba(200, 200, 200, 0.95), rgba(220, 220, 220, 0.95), );
+   color: #ffffff;
+   padding: 20px 60px;
+   font-size: 24px;
+   font-weight: 600;
+   text-align: center;
+   border-radius: 8px;
+   box-shadow:
+     0 8px 32px rgba(0, 0, 0, 0.3),
+     inset 0 1px 3px rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ #mensaje-bienvenida:hover {
+   transform: scale(1.07, 1.07);
+ }
+
